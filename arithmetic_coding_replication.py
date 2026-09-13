@@ -18,7 +18,6 @@ The two artificial files are constructed exactly as described in the paper:
 
 from collections import Counter
 import math
-import heapq
 import numpy as np
 
 class AdaptiveModel:
@@ -172,24 +171,6 @@ class ArithmeticCoder:
             model.update(symbol)
 
         return bytes(decoded)
-
-
-def huffman_bits(data):
-    """Exact bit count for a static Huffman code using empirical frequencies."""
-    frequency = Counter(data)
-    if len(frequency) <= 1:
-        return len(data)
-
-    heap = [[count, symbol] for symbol, count in frequency.items()]
-    heapq.heapify(heap)
-    next_id = max(frequency) + 1
-
-    while len(heap) > 1:
-        f1, a = heapq.heappop(heap)
-        f2, b = heapq.heappop(heap)
-        heapq.heappush(heap, [f1 + f2, next_id, (a, b)])
-        next_id += 1
-    return None
 
 
 def paper_test_files():
