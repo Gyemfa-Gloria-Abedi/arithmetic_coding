@@ -1,0 +1,3 @@
+Dataset,Input bytes,Our output bytes,Our bits/char,Paper output bytes,Paper bits/char,Exact output match,Round-trip correct
+Alphabet,100000,59292,4.74335,59292,4.74336,True,True
+Skew statistics,100000,12092,0.96736,12092,0.96736,True,True
