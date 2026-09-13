@@ -28,7 +28,6 @@ The implementation uses the practical design described in the paper:
 ├── replication_results.csv            # Replication measurements
 ├── sensitivity_analysis.csv           # Extension experiment measurements
 ├── figures/
-│   ├── replication_output_sizes.png
 │   └── sensitivity_analysis.png
 ├── tests/
 │   └── test_arithmetic_coding.py      # Automated correctness/replication tests
